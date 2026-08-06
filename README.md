@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21819852.svg)](https://doi.org/10.5281/zenodo.21819852)
+
 # LinearSolverBenchmarks.jl -- Benchmarking linear solvers for elliptic PDEs and drift-diffusion systems
 
 `LinearSolverBenchmarks.jl` is a Julia framework for comparing direct and iterative solvers for sparse linear systems arising from elliptic partial differential equations and semiconductor device simulations.
