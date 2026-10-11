@@ -176,7 +176,9 @@ function benchmark(
     # Define solver configurations
     ################################################################################
     # Symmetric and Non-Symmetric Problem
-    if solver_config == :direct
+    if solver_config == :direct_new
+        configs = ModelProblem.solver_configs_direct_new
+    elseif solver_config == :direct
         configs = ModelProblem.solver_configs_direct
     elseif solver_config == :direct_pardiso
         configs = ModelProblem.solver_configs_direct_pardiso

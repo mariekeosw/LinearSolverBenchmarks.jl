@@ -14,6 +14,7 @@ module ModelProblem
 
     include("model_problem/benchmark.jl")
     export SolverConfig
+    export solver_configs_direct_new
     export solver_configs_direct
     export solver_configs_direct_pardiso
     export sym_solver_configs_cg

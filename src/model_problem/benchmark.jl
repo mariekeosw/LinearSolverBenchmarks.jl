@@ -9,6 +9,16 @@ end
 ################################################################################
 # Solver Configurations: Symmetric and Non-Symmetric Problem
 ################################################################################
+# Direct solver - new pure Julia implementations
+const solver_configs_direct_new = (
+    SolverConfig("PureKLU", PureKLUFactorization()),
+    SolverConfig("SupernodalLU", SupernodalLUFactorization()),
+    SolverConfig("UMFPACK", UMFPACKFactorization()),
+    SolverConfig("KLU", KLUFactorization()),
+    SolverConfig("MKLPardiso", MKLPardisoFactorize()),
+    SolverConfig("Sparspak", SparspakFactorization()),
+)
+
 # Direct solver from LinearSolve.jl and Pardiso.jl
 const solver_configs_direct = (
     SolverConfig("UMFPACK", UMFPACKFactorization()),
