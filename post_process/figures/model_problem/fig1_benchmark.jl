@@ -53,7 +53,9 @@ function plot_benchmark(filename; Plotter = nothing, save_figure = false, title_
         xlabel = L"\mathrm{problem\ size}",
         yscale = :log10,
         xscale = :log10,
-        yticks = 10.0 .^ (-3:1:3),
+        ylims = (1.0e-5, 1.0e3), # (1.0e-5, 0.2e1) for 2D
+        #xlims = ,
+        yticks = 10.0 .^ (-5:1:3),
         xticks = 10.0 .^ (1:8),
         bottom_margin = 10 * Plotter.px,
         legend = :topleft,
@@ -64,8 +66,10 @@ function plot_benchmark(filename; Plotter = nothing, save_figure = false, title_
         grid = true,
         gridlinewidth = 0.15,
         gridcolor = :black,
-        gridalpha = 0.6,
+        gridalpha = 0.2,
     )
+
+    dimensions = [3]
 
     for dimension in dimensions
         for (i, label) in enumerate(labels)
